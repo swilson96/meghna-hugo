@@ -15,12 +15,12 @@
 
 				{{"<!-- copyright -->" | safeHTML}}
 				<div class="copyright text-center">
-					<a href="{{ .Site.BaseURL | absURL }}">
+					<!-- <a href="{{ .Site.BaseURL | absURL }}">
 						<img src="{{ .Site.Params.logo | absURL }}" alt="Meghna" /> 
 					</a>
-					<br>
+					<br> -->
 
-					<p>Design And Developed by <a href="{{ .Site.Params.footer.copyrightURL | absURL }}"> {{ with .Site.Params.footer.copyright }} {{ . }} {{ end }} </a>. Copyright &copy; <script>
+					<p>Design And Developed by {{ with .Site.Params.footer.copyright }} {{ . }} {{ end }}. Copyright &copy; <script>
 							document.write(new Date().getFullYear())
 						</script>. All Rights Reserved.</p>
 				</div>
