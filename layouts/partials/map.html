@@ -1,0 +1,15 @@
+{{ if .Site.Data.map.enable }}
+{{"<!-- Start map -->" | safeHTML}}
+<section id="map" class="contact-us section-bg padding-0">
+
+    {{ if .Site.Data.map.enable_maps }}
+    {{"<!-- Google Map -->" | safeHTML}}
+    <div class="google-map">
+        <div id="map-canvas" {{ with .Site.Data.map.mapLatitude }} data-latitude="{{ . }}" {{ end }} 
+        {{ with .Site.Data.map.mapLongitude }} data-longitude="{{ . }}" {{ end }}></div>
+    </div>
+    {{ end }}
+
+</section>
+{{"<!-- end map -->" | safeHTML}}
+{{ end }}

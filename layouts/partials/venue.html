@@ -1,0 +1,20 @@
+{{ if .Site.Data.venue.enable}}
+{{"<!-- venue -->" | safeHTML}}
+<section class="section about-2 padding-0 bg-dark" id="venue">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 padding-0 ">
+                <img class="img-responsive" src="{{ .Site.Data.venue.image | absURL}}" alt="Homme House">
+            </div>
+            <div class="col-md-6">
+                <div class="content-block">
+                   {{with .Site.Data.venue.title}} <h2>{{ . }}</h2> {{ end }}
+                   {{with .Site.Data.venue.description}} <p>{{ . }}</p> {{ end }}
+                   <p><a href="{{ .Site.Data.venue.link }}" target="_blank">{{ .Site.Data.venue.link_text }}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{"<!-- /venue -->" | safeHTML}}
+{{ end }}
