@@ -9,7 +9,9 @@
                     <h2>{{ .Site.Data.travel.heading}}</h2>
                     <div class="border"></div>
                 </div>
-               {{ with .Site.Data.travel.content }} <p>{{ . }}</p> {{ end }}
+                {{ range .Site.Data.travel.content }}
+                  <p>{{ . }}</p>
+                {{ end }}
             </div>
         </div>
     </div>

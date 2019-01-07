@@ -3,13 +3,15 @@
 <section class="portfolio section" id="accommodation">
     <div class="container">
         <div class="row ">
-            <div class="col-lg-12">
+            <div class="col-lg-12 text-center">
                 {{"<!-- section title -->" | safeHTML}}
                 <div class="title text-center">
                     <h2> {{ with .Site.Data.accommodation.heading }} {{ . }} {{ end }} <span class="color">{{ with .Site.Data.accommodation.headingSpan }} {{ . }} {{ end }}</span></h2>
                     <div class="border"></div>
                 </div>
                 {{"<!-- /section title -->" | safeHTML}}
+                {{ with .Site.Data.accommodation.info }} <p>{{ . }}</p> {{ end }}
+                <p class="accom-link"><a class="dark-link" href="{{ .Site.Data.accommodation.link }}" target="_blank">{{ .Site.Data.accommodation.link_text }}</a></p>
             </div>
         </div>
         <div class="row">
@@ -30,11 +32,10 @@
                     <img class="img-responsive" src="{{ .image | absURL}}" alt="work-image">
                     <div class="caption">
 
-                        <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="{{ .image | absURL}}"
-                            data-lightbox="image-1">
+                        <a class="search-icon" href="{{ .URL | absURL}}" target="_blank">
                             <i class="{{ .icon }}"></i>
                         </a>
-                        <h4><a href="{{ .URL | absURL }}">{{ .title }}</a></h4>
+                        <h4><a href="{{ .URL | absURL }}" target="_blank">{{ .title }}</a></h4>
                         <p>{{ .description }}</p>
                     </div>
                 </div>
