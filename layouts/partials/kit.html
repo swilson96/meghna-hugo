@@ -1,20 +1,20 @@
-{{ if .Site.Data.travel.enable}}
-{{"<!-- Start Travel Section -->" | safeHTML}}
-<section class="call-to-action section bg-1 overly" id="travel" style='background-image: url("{{ .Site.Data.travel.bgImage | absURL }}")'>
+{{ if .Site.Data.kit.enable}}
+{{"<!-- Start kit Section -->" | safeHTML}}
+<section class="call-to-action section bg-1 overly" id="kit" style='background-image: url("{{ .Site.Data.travel.bgImage | absURL }}")'>
     <div class="layer"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-                    <h2>{{ .Site.Data.travel.heading}}</h2>
+                    <h2>{{ .Site.Data.kit.heading}}</h2>
                     <div class="border"></div>
                 </div>
-                {{ range .Site.Data.travel.content }}
+                {{ range .Site.Data.kit.content }}
                   <p>{{ . | safeHTML }}</p>
                 {{ end }}
             </div>
         </div>
     </div>
 </section>
-{{"<!-- /travel -->" | safeHTML}}
+{{"<!-- /kit -->" | safeHTML}}
 {{ end }}

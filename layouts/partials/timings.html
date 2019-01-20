@@ -10,17 +10,30 @@
             </div>
             {{"<!-- /section title -->" | safeHTML}}
 
+            <div class="col-md-2 col-md-offset-1 text-center wow fadeInUp" data-wow-duration="500ms">
+                <div class="block">
+                    <div>
+                        {{with .Site.Data.timings.firstItem.icon}}<i class="{{ . }}"></i>{{ end }}
+                    </div>
+                    <div class="content text-center">
+                      {{ with .Site.Data.timings.firstItem.title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
+                      {{ with .Site.Data.timings.firstItem.time }}<h4 class="ddd">{{ . }}</h4>{{ end }}
+                      {{ with .Site.Data.timings.firstItem.content}}<p>{{ . }}</p>{{ end }}
+                    </div>
+                </div>
+            </div>
+
             {{ range .Site.Data.timings.aboutItem }}
             {{"<!-- timing item -->" | safeHTML}}
-            <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="500ms">
+            <div class="col-md-2 text-center wow fadeInUp" data-wow-duration="500ms">
                 <div class="block">
-                    <div class="icon-box">
-                            {{with .icon}}<i class="{{ . }}"></i>{{ end }}
+                    <div>
+                        {{with .icon}}<i class="{{ . }}"></i>{{ end }}
                     </div>
                     <div class="content text-center">
                       {{ with .title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
                       {{ with .time }}<h4 class="ddd">{{ . }}</h4>{{ end }}
-                      {{ with .content}}  <p>{{ . }}</p>{{ end }}
+                      {{ with .content}}<p>{{ . }}</p>{{ end }}
                     </div>
                 </div>
             </div>

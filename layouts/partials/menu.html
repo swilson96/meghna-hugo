@@ -1,0 +1,28 @@
+{{ if .Site.Data.menu.enable}}
+{{"<!-- Start menu Section -->" | safeHTML}}
+<section class="bg-one call-to-action section" id="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                {{"<!-- section title -->" | safeHTML}}
+                <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+                    <h2>{{ .Site.Data.menu.heading}}</h2>
+                    <div class="border"></div>
+                </div>
+                {{"<!-- /section title -->" | safeHTML}}
+                {{ range .Site.Data.menu.content }}
+                  <p>{{ . | safeHTML }}</p>
+                {{ end }}
+
+                {{ range .Site.Data.menu.menuItem }}
+                    {{ with .title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
+                    {{ range .content }}
+                        <p>{{ .line }}</p>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{"<!-- /menu -->" | safeHTML}}
+{{ end }}
