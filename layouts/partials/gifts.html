@@ -10,7 +10,7 @@
                     <div class="border"></div>
                 </div>
                 {{"<!-- /section title -->" | safeHTML}}
-                {{ with .Site.Data.gifts.content }} <p>{{ . }}</p> {{ end }}
+                {{ with .Site.Data.gifts.content }} <p>{{ . | safeHTML}}</p> {{ end }}
             </div>
         </div>
     </div>
