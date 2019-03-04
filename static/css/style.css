@@ -56,6 +56,13 @@ h4, p {
   font-size: 1.7em;
 }
 
+/*
+Travel
+*/
+#travel h3, .travel h3 {
+  color: #434f5a;
+}
+
 .call-to-action a {
   color: #737f8a;
   cursor: pointer;
@@ -2211,5 +2218,7 @@ blockquote {
 .form-group:last-child input {
   margin: 0;
 }
+
+
 
 /*# sourceMappingURL=maps/style.css.map */
